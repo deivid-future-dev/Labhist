@@ -2,61 +2,112 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: linear-gradient(to right, yellow, rgb(223,223,11), rgb(179,179,5));
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5e90a, #d4c900, #b3a900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Centralização */
 .container {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding: 35px 30px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 15px;
 }
 
+/* Título */
 .login {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
 }
 
+/* Parte de inputs */
 input {
-  width: 80%;
-  max-width: 320px;
+  width: 100%;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: none;
-  text-align: center;
-  font-weight: bold;
+  padding: 0 15px;
+
+  background: rgba(255,255,255,0.8);
+  font-size: 14px;
 }
 
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00000030;
+}
+
+/* Os links */
 .forgot {
-  font-size: 14px;
+  font-size: 13px;
+  color: #333;
+  text-decoration: none;
 }
 
-.cadastro {
-  font-size: 14px;
+.forgot:hover {
+  text-decoration: underline;
 }
 
+/* O botão principal */
 .confirm {
-  width: 200px;
-  height: 55px;
+  width: 100%;
+  height: 50px;
   border-radius: 30px;
   border: none;
-  font-size: 16px;
-  margin-top: 10px;
+
+  background: #111;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+.confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Parte do ou */
+.divider {
+  font-size: 13px;
+  color: #444;
+  margin: 5px 0;
+}
+
+/* LOGIN */
 .login-button {
-  width: 260px;
+  width: 100%;
   height: 45px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
 
   display: flex;
@@ -65,22 +116,46 @@ input {
   gap: 10px;
 
   font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .login-button img {
-  width: 24px;
+  width: 22px;
 }
 
+.login-button:hover {
+  transform: scale(1.02);
+}
+
+/* Logo do Google */
 .google {
-  background: white;
+  background: #fff;
+  color: #333;
 }
 
+/* Logo da Apple */
 .apple {
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
 }
 
-.apple1{
-  position: relative;
-  height: 30px;
+.apple1 {
+  height: 24px;
+}
+
+/* Cadastro */
+.cadastro {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.cadastro a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cadastro a:hover {
+  text-decoration: underline;
 }

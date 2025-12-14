@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LabHist</title>
+
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1 class="login">LOGIN</h1>
+    <div class="card">
+      <h1 class="login">LOGIN</h1>
 
-    <input type="text" placeholder="DIGITE SEU USUÁRIO">
-    <input type="password" placeholder="DIGITE SUA SENHA">
+      <input type="text" placeholder="Usuário">
+      <input type="password" placeholder="Senha">
 
-    <a href="#" class="forgot">Esqueceu sua senha?</a>
-    <p class="cadastro">Não tem uma conta? <a href="#">Cadastre-se!</a></p>
+      <a href="#" class="forgot">Esqueceu sua senha?</a>
 
-    <button class="confirm">Login</button>
+      <button class="confirm">Entrar</button>
 
-    <button class="login-button google">
-      Entrar com o <img src="icons/google.png">
-    </button>
+      <div class="divider">ou</div>
 
-    <button class="login-button apple">
-      Entrar com a <img class="apple1" src="icons/apple logo.jpg">
-    </button>
+      <button class="login-button google">
+        <img src="icons/google.png"> Entrar com Google
+      </button>
+
+      <button class="login-button apple">
+        <img class="apple1" src="icons/apple logo.jpg"> Entrar com Apple
+      </button>
+
+      <p class="cadastro">
+        Não tem uma conta? <a href="#">Cadastre-se</a>
+      </p>
+    </div>
   </div>
 </body>
 </html>
