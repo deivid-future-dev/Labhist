@@ -1,87 +1,82 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-body{
-    background-image: linear-gradient(to right, yellow, rgb(223, 223, 11), rgb(179, 179, 5));
+body {
+  background: linear-gradient(to right, yellow, rgb(223,223,11), rgb(179,179,5));
 }
 
-.container{
-    background-image: url(imgs/unnamed.png);
-    background-size: cover;
-    background-position: center center;
-    min-height: 100vh;
-    min-width: 100vw;
-    text-align: center;
+.container {
+  min-height: 100vh;
+  background-image: url(imgs/unnamed.png);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
-.login{
-    position: relative;
-    top: 25vh;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 3.5em;
-    
+.login {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-.name, .password{
-    position: relative;
-    top: 35vh;
-    padding-bottom: 40px;
+input {
+  width: 80%;
+  max-width: 320px;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  text-align: center;
+  font-weight: bold;
 }
 
-input{
-    width: 24%;
-    height: 3vh;
-    border-radius: 12px;
-    font-weight: bold;
-    color: rgb(100, 31, 31);
+.forgot {
+  font-size: 14px;
 }
 
-::placeholder{
-    text-align: center;
+.cadastro {
+  font-size: 14px;
 }
 
-.forgot-password{
-    position: relative;
-    top: 32vh;
-    right: 5vw;
+.confirm {
+  width: 200px;
+  height: 55px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-button{
-    position: relative;
-    top: 34vh;
-    height: 4vh;
-    width: 15vw;
-    border-radius: 10px;
+.login-button {
+  width: 260px;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-size: 14px;
 }
 
-.cadastro{
-    position: relative;
-    left: 5vw;
+.login-button img {
+  width: 24px;
 }
 
-.login-button{
-    position: relative;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 8px;
-    margin-top: 15px;
-    align-items: center;
-    gap: 12px;
-    font-size: 13px
+.google {
+  background: white;
 }
 
-.google-icon{
-    width: 28px;
-}
-
-.apple-icon{
-    width: 28px;
-}
-
-.confirm{
-    width: 181px;
+.apple {
+  background: black;
+  color: white;
 }
