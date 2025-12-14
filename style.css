@@ -11,7 +11,6 @@ body {
 
 .container {
   min-height: 100vh;
-  background-image: url(imgs/unnamed.png);
   background-size: cover;
   background-position: center;
 
@@ -79,4 +78,9 @@ input {
 .apple {
   background: black;
   color: white;
+}
+
+.apple1{
+  position: relative;
+  height: 30px;
 }
