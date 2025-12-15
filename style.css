@@ -26,13 +26,10 @@ body {
   width: 100%;
   max-width: 380px;
   padding: 35px 30px;
-
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(12px);
   border-radius: 20px;
-
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +51,6 @@ input {
   border-radius: 14px;
   border: none;
   padding: 0 15px;
-
   background: rgba(255,255,255,0.8);
   font-size: 14px;
 }
@@ -81,12 +77,10 @@ input:focus {
   height: 50px;
   border-radius: 30px;
   border: none;
-
   background: #111;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-
   cursor: pointer;
   transition: 0.3s;
 }
@@ -109,12 +103,10 @@ input:focus {
   height: 45px;
   border-radius: 12px;
   border: none;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   font-size: 14px;
   cursor: pointer;
   transition: 0.3s;
