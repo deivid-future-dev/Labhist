@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5e90a, #d4c900, #b3a900);
+  background: linear-gradient(135deg, #FFC000);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,7 +123,6 @@ input:focus {
 /* Logo do Google */
 .google {
   background: #fff;
-  color: #333;
 }
 
 /* Logo da Apple */
@@ -154,8 +153,8 @@ input:focus {
 
 .logo {
   width: 120px;
-  padding: 5px;
-  background: rgba(218, 125, 4, 0.781);
+  padding: 2.5px;
+  background: rgba(206, 104, 9, 0.288);
   border-radius: 50%;
   box-shadow: 0px 0px 0px 1px solid black;
   margin-bottom: 10px
