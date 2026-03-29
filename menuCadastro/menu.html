@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<div class="panel">
+    <div class="panel-header">
+        <h1 class="panel-title">Botões de Cadastro</h1>
+    </div>
+
+    <div class="btn-group">
+
+        <!-- Botão Professor -->
+        <button class="btn-card professor" onclick="openModal('modalProfessor')">
+            <div class="btn-icon">👨‍🏫</div>
+            <div class="btn-text">
+                <strong>Cadastrar Professor</strong>
+            </div>
+        </button>
+
+        <!-- Botão Aluno -->
+        <button class="btn-card aluno" onclick="openModal('modalAluno')">
+            <div class="btn-icon">🎓</div>
+            <div class="btn-text">
+                <strong>Cadastrar Aluno</strong>
+            </div>
+        </button>
+
+        <!-- Botão Projeto -->
+        <button class="btn-card projeto" onclick="openModal('modalProjeto')">
+            <div class="btn-icon">🚀</div>
+            <div class="btn-text">
+                <strong>Cadastrar Projeto</strong>
+            </div>
+        </button>
+
+    </div>
+</div>
+
+
+<!-- ===== MODAL PROFESSOR ===== -->
+<div class="modal-overlay" id="modalProfessor" onclick="closeOnBackdrop(event, 'modalProfessor')">
+    <div class="modal-box">
+        <div class="modal-accent-bar blue"></div>
+        <div class="modal-head">
+            <div class="modal-head-left">
+                <div class="modal-head-icon" style="background:rgba(79,142,247,0.15); color:#4f8ef7; cursor: pointer;">👨‍🏫</div>
+                <div class="modal-head-info">
+                    <div class="modal-head-label" style="color: yellow;">cadastro de</div>
+                    <div class="modal-head-title">Novo Professor</div>
+                </div>
+            </div>
+            <button class="modal-close" onclick="closeModal('modalProfessor')">✕</button>
+        </div>
+        <div class="modal-divider"></div>
+        <div class="modal-body-custom">
+            <div class="form-section">
+                <label class="form-label">Nome Completo</label>
+                <input class="form-input" type="text" placeholder="Digite o nome">
+            </div>
+            <div class="form-section">
+                <label class="form-label">Matrícula</label>
+                <input class="form-input" type="text" placeholder="Digite a matricula">
+            </div>
+            <div class="form-section">
+                <label class="form-label">E-mail institucional</label>
+                <input class="form-input" type="email" placeholder="professor@academico.ifs.edu.br">
+            </div>
+            <div class="form-section">
+                <label class="form-label">Telefone</label>
+                <input class="form-input" type="text" placeholder="(79) 99999-0000">
+            </div>
+        </div>
+        <div class="modal-foot">
+            <button class="btn-ghost" onclick="clearModal('modalProfessor')">Limpar</button>
+            <button class="btn-submit blue">Cadastrar Professor</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ===== MODAL ALUNO ===== -->
+<div class="modal-overlay" id="modalAluno" onclick="closeOnBackdrop(event, 'modalAluno')">
+    <div class="modal-box">
+        <div class="modal-accent-bar green"></div>
+        <div class="modal-head">
+            <div class="modal-head-left">
+                <div class="modal-head-icon" style="background:rgba(6,214,160,0.15); color:#06d6a0; cursor: pointer;">🎓</div>
+                <div class="modal-head-info">
+                    <div class="modal-head-label" style="color: yellow;">cadastro de</div>
+                    <div class="modal-head-title">Novo Aluno</div>
+                </div>
+            </div>
+            <button class="modal-close" onclick="closeModal('modalAluno')">✕</button>
+        </div>
+        <div class="modal-divider"></div>
+        <div class="modal-body-custom">
+            <div class="form-section">
+                <label class="form-label">Nome Completo</label>
+                <input class="form-input green" type="text" placeholder="Digite o nome completo">
+            </div>
+            <div class="form-section">
+                <label class="form-label">Matrícula</label>
+                <input class="form-input green" type="text" placeholder="Digite a matricula">
+            </div>
+            <div class="form-section">
+                <label class="form-label">Curso</label>
+                <div class="radio-group">
+                    <label class="radio-option green"><input type="radio" name="curso"> <span class="radio-dot"></span> Integrado em Programação de Jogos Digitais</label>
+                    <label class="radio-option green"><input type="radio" name="curso"> <span class="radio-dot"></span> Integrado em Energias Renováveis</label>
+                    <label class="radio-option green"><input type="radio" name="curso"> <span class="radio-dot"></span> Integrado em Edificações</label>
+                    <label class="radio-option green"><input type="radio" name="curso"> <span class="radio-dot"></span> Integrado em Eletrotécnica</label>
+                </div>
+            </div>
+            <div class="form-section">
+                <label class="form-label">Turma</label>
+                <div class="radio-row">
+                    <label class="radio-option green"><input type="radio" name="turma"> <span class="radio-dot"></span> 1° Ano</label>
+                    <label class="radio-option green"><input type="radio" name="turma"> <span class="radio-dot"></span> 2° Ano</label>
+                    <label class="radio-option green"><input type="radio" name="turma"> <span class="radio-dot"></span> 3° Ano</label>
+                </div>
+            </div>
+            <div class="form-section">
+                <label class="form-label">E-mail</label>
+                <input class="form-input green" type="email" placeholder="aluno@academico.ifs.edu.br">
+            </div>
+            <div class="form-section">
+                <label class="form-label">Telefone</label>
+                <input class="form-input green" type="text" placeholder="(79) 99999-0000">
+            </div>
+        </div>
+        <div class="modal-foot">
+            <button class="btn-ghost" onclick="clearModal('modalAluno')">Limpar</button>
+            <button class="btn-submit green">Cadastrar Aluno</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ===== MODAL PROJETO ===== -->
+<div class="modal-overlay" id="modalProjeto" onclick="closeOnBackdrop(event, 'modalProjeto')">
+    <div class="modal-box">
+        <div class="modal-accent-bar purple"></div>
+        <div class="modal-head">
+            <div class="modal-head-left">
+                <div class="modal-head-icon" style="background:rgba(124,58,237,0.15); color:#a78bfa; cursor: pointer;">🚀</div>
+                <div class="modal-head-info">
+                    <div class="modal-head-label" style="color:yellow;">cadastro de</div>
+                    <div class="modal-head-title;">Novo Projeto</div>
+                </div>
+            </div>
+            <button class="modal-close" onclick="closeModal('modalProjeto')">✕</button>
+        </div>
+        <div class="modal-divider"></div>
+        <div class="modal-body-custom">
+            <div class="form-section">
+                <label class="form-label">Nome do Projeto</label>
+                <input class="form-input purple" type="text" placeholder="Digite o nome do Projeto">
+            </div>
+            <div class="form-section">
+                <label class="form-label">Descrição</label>
+                <textarea class="form-input purple" rows="3" placeholder="Descreva brevemente o projeto..." style="resize:vertical; line-height:1.6;"></textarea>
+            </div>
+            <div class="form-section">
+                <label class="form-label">Objetivo Principal</label>
+                <textarea class="form-input purple" rows="2" placeholder="Qual é o objetivo central do projeto?" style="resize:vertical; line-height:1.6;"></textarea>
+            </div>
+        </div>
+        <div class="modal-foot">
+            <button class="btn-ghost" onclick="clearModal('modalProjeto')">Limpar</button>
+            <button class="btn-submit purple">Cadastrar Projeto</button>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+<script src="cadastro.js"></script>
+</html>

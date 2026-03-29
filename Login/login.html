@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LabHist</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
   <div class="container">
     <div class="card">
-      <img src="imgs/logo.png" alt="LabHist" class="logo">
+      <img src="../assets/logo.png" alt="LabHist" class="logo">
       <h1 class="login">LOGIN</h1>
+
+      <!-- Seleção de perfil -->
+      <div class="role-group">
+        <p>Perfil de acesso</p>
+        <div class="role-options">
+          <div class="role-option">
+            <input type="radio" name="perfil" id="administrador" value="administrador">
+            <label for="administrador">
+              <span class="icon">🛡️</span>
+              Administrador
+            </label>
+          </div>
+          <div class="role-option">
+            <input type="radio" name="perfil" id="professor" value="professor" checked>
+            <label for="professor">
+              <span class="icon">📚</span>
+              Professor
+            </label>
+          </div>
+          <div class="role-option">
+            <input type="radio" name="perfil" id="aluno" value="aluno">
+            <label for="aluno">
+              <span class="icon">🎓</span>
+              Aluno
+            </label>
+          </div>
+        </div>
+      </div>
 
       <input type="text" placeholder="Usuário" id="usuario" required>
       <input type="password" placeholder="Senha" id="senha" required>
@@ -22,23 +49,10 @@
 
       <button class="confirm" id="botao">Entrar</button>
       <p id="para"></p>
-
-      <div class="divider">ou</div>
-
-      <button class="login-button google">
-        <img src="icons/google.png"> Entrar com Google
-      </button>
-
-      <button class="login-button apple">
-        <img class="apple1" src="icons/apple logo.jpg"> 
-          Entrar com Apple
-      </button>
-
-      <p class="cadastro"> Não tem uma conta? <a href="#">Cadastre-se</a>
-      </p>
+      <p class="visitante"> Gostaria de conhecer-nos? <a href="#">Entrar como visitante</a></p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="LoginValidation.js"></script>
 </body>
 </html>
